@@ -2,7 +2,7 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  /* белый #FFFFFF; */
+  --white-color: #ffffff;
 }
 
 body {
@@ -82,45 +82,57 @@ body {
   display: flex;
   margin-left: auto;
 }
-.contacts {
+.cells {
+  display: block;
   color: var(--primary-text-color);
 
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
+
 /* иконка конверта и телефона*/
 .cells {
   display: flex;
   padding: 0;
-
   align-items: center;
 }
 
 .envelope {
+  margin-right: 10px;
+}
+.smartphone {
+  margin-right: 10px;
+}
+.icon-envelope {
+  display: block;
   padding-top: 34px;
   padding-bottom: 34px;
   display: block;
   display: flex;
   margin-right: 10px;
+  fill: currentColor;
+  color: #757575;
+  text-decoration: none;
 }
-.smartphone {
+.icon-smartphone {
   display: block;
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-right: 10px;
+  fill: currentColor;
+  color: #757575;
+  text-decoration: none;
 }
 /* наведение*/
-
 .site-nav :hover,
 .site-nav :focus {
   color: #2196f3;
 }
-.auth-nav :hover,
-.auth-nav :focus {
+.auth-nav a:hover,
+.auth-nav a:focus {
   color: #2196f3;
 }
 
@@ -135,8 +147,11 @@ body {
   max-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../image/Img.fond.jpg);
-  background-color: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/Img.fond.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -348,16 +363,16 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  fill: currentColor;
   color: #afb1b8;
 }
-.icon-web:hover,
-.icon-web:focus {
+
+.plate :hover,
+.plate :focus {
   background-color: #2196f3;
-}
-.icon-face :hover,
-.icon-face :focus {
   fill: #ffffff;
 }
+
 /* постоянные клиенты */
 
 .customer-section {
@@ -388,7 +403,13 @@ img {
   justify-content: space-between;
   list-style: none;
 }
-.customers-group {
+
+.icon-customers {
+  fill: currentColor;
+  color: #afb1b8;
+}
+.icon-docket {
+  display: block;
   width: 170px;
   height: 92px;
   padding: 16px 32px;
@@ -397,24 +418,22 @@ img {
   border-radius: 4px;
 }
 
-.customers-group:hover,
-.customers-group:focus {
+.icon-docket:hover,
+.icon-docket:focus svg {
   border: 1px solid #2196f3;
-}
-
-.icon-docket {
-  fill: currentColor;
-}
-.icon-customers :hover,
-.icon-docket :focus {
   fill: #2196f3;
 }
+.icon-docket:hover svg {
+  fill: #2196f3;
+}
+
 /* footer */
 
 .footer {
+  display: block;
   margin-right: 0;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 0;
   background: #2f303a;
 }
 
@@ -503,6 +522,7 @@ h3 {
   margin-bottom: 20px;
 }
 .footer-network {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
@@ -513,15 +533,15 @@ h3 {
 .icon-button {
   display: block;
   fill: currentColor;
-  padding: 0;
-  margin: 0;
+  color: #ffffff;
 }
 .icon-heading:not(:last-child) {
   margin-right: 10px;
 }
 .system {
   display: block;
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+
   display: flex;
   height: 44px;
   width: 44px;
@@ -534,6 +554,6 @@ h3 {
 .system:focus {
   background-color: #2196f3;
 }
-.icon-button :hover {
-  fill: #ffffff;
+.system:hover {
+  fill: #2196f3;
 }
